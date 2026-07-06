@@ -16,7 +16,7 @@
 - Artisanal
 
 # Reference material
-- [OCCT Source Code](reference/OCCT)
+- [OCCT Source Code](./reference/OCCT)
 - [Apple Documentation](/Users/amannmalik/PycharmProjects/docs/apple_docs)
 
 # Environment

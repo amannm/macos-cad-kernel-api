@@ -42,13 +42,19 @@ OCC_APPLE_API occ_status_t OCC_APPLE_CALL occ_apple_mesh_transform(occ_mesh_view
 OCC_APPLE_API occ_status_t OCC_APPLE_CALL occ_apple_mesh_bbox(occ_mesh_view_t view, occ_bbox_t* out_bbox);
 
 OCC_APPLE_API occ_status_t OCC_APPLE_CALL occ_apple_metal_mesh_create(id<MTLDevice> device, occ_mesh_view_t view, occ_apple_metal_mesh_t** out_mesh);
+OCC_APPLE_API occ_status_t OCC_APPLE_CALL occ_apple_metal_mesh_create_packed(id<MTLDevice> device, occ_mesh_view_t view, const occ_mesh_packed_options_t* options_or_null, occ_apple_metal_mesh_t** out_mesh);
 OCC_APPLE_API void OCC_APPLE_CALL occ_apple_metal_mesh_destroy(occ_apple_metal_mesh_t* mesh);
+OCC_APPLE_API id<MTLBuffer> OCC_APPLE_CALL occ_apple_metal_mesh_vertices(const occ_apple_metal_mesh_t* mesh);
 OCC_APPLE_API id<MTLBuffer> OCC_APPLE_CALL occ_apple_metal_mesh_positions(const occ_apple_metal_mesh_t* mesh);
 OCC_APPLE_API id<MTLBuffer> OCC_APPLE_CALL occ_apple_metal_mesh_normals(const occ_apple_metal_mesh_t* mesh);
 OCC_APPLE_API id<MTLBuffer> OCC_APPLE_CALL occ_apple_metal_mesh_uvs(const occ_apple_metal_mesh_t* mesh);
 OCC_APPLE_API id<MTLBuffer> OCC_APPLE_CALL occ_apple_metal_mesh_indices(const occ_apple_metal_mesh_t* mesh);
+OCC_APPLE_API NSUInteger OCC_APPLE_CALL occ_apple_metal_mesh_vertex_stride(const occ_apple_metal_mesh_t* mesh);
 OCC_APPLE_API NSUInteger OCC_APPLE_CALL occ_apple_metal_mesh_vertex_count(const occ_apple_metal_mesh_t* mesh);
 OCC_APPLE_API NSUInteger OCC_APPLE_CALL occ_apple_metal_mesh_triangle_count(const occ_apple_metal_mesh_t* mesh);
+OCC_APPLE_API NSUInteger OCC_APPLE_CALL occ_apple_metal_mesh_index_count(const occ_apple_metal_mesh_t* mesh);
+OCC_APPLE_API occ_mesh_vertex_format_t OCC_APPLE_CALL occ_apple_metal_mesh_vertex_format(const occ_apple_metal_mesh_t* mesh);
+OCC_APPLE_API occ_mesh_index_format_t OCC_APPLE_CALL occ_apple_metal_mesh_index_format(const occ_apple_metal_mesh_t* mesh);
 OCC_APPLE_API MTLIndexType OCC_APPLE_CALL occ_apple_metal_mesh_index_type(const occ_apple_metal_mesh_t* mesh);
 
 OCC_APPLE_API MDLMesh* OCC_APPLE_CALL occ_apple_modelio_mesh_create(id<MTLDevice> device, occ_mesh_view_t view);
