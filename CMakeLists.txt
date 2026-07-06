@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.24)
 project(occ_c LANGUAGES CXX)
 
 add_library(occ_c SHARED occ_c.cpp)
+target_sources(occ_c PUBLIC occ_c.h occ_defs.h occ_apple.h)
 target_compile_features(occ_c PRIVATE cxx_std_17)
 target_compile_definitions(occ_c PRIVATE OCC_C_BUILD)
 target_include_directories(occ_c PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
