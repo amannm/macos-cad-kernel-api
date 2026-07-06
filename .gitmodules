@@ -1,0 +1,4 @@
+[submodule "reference/OCCT"]
+	path = reference/OCCT
+	url = https://github.com/Open-Cascade-SAS/OCCT.git
+	ignore = all
